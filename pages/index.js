@@ -12,6 +12,7 @@ function Home() {
   return (
     <div>
       <h1>Home Page</h1>
+      <Link href="/users">Users</Link>&nbsp;&nbsp;
       <Link href="/blog">Blog</Link>&nbsp;&nbsp;
       <Link href="/docs">Docs</Link>&nbsp;&nbsp;
       <Link href="/houses">Houses</Link>&nbsp;&nbsp;

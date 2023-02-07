@@ -3,7 +3,9 @@ import Link from "next/link";
 function ProductList({ productId = 100 }) {
   return (
     <div>
-      <Link href="/">Home</Link>
+      <h3>
+        <Link href="/">Home</Link>
+      </h3>
       <h2>
         <Link href="/product/1">Product 1</Link>
       </h2>

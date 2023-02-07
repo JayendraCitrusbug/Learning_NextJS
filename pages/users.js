@@ -1,20 +1,21 @@
-import Post from "@/components/post";
+import User from "@/components/user";
 import Link from "next/link";
 
-function Blog({ posts }) {
+// function UserList(props) {
+function UserList({ users }) {
   return (
     <div>
       <h3>
         <Link href="/">Home</Link>
       </h3>
-      <h1>Blog Page</h1>
+      <h1>List of users</h1>
 
-      {posts.map((post) => {
+      {users.map((user) => {
         return (
           <>
             <br></br>
-            <div key={post.id}>
-              <Post post={post} />
+            <div key={user.id}>
+              <User user={user} />
             </div>
           </>
         );
@@ -23,15 +24,15 @@ function Blog({ posts }) {
   );
 }
 
-export default Blog;
+export default UserList;
 
 export async function getStaticProps() {
-  const response = await fetch("https://jsonplaceholder.typicode.com/posts");
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
   const data = await response.json();
 
   return {
     props: {
-      posts: data,
+      users: data,
     },
   };
 }
