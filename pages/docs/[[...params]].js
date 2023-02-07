@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRouter } from "next/router";
 
 function Doc() {
@@ -14,7 +15,12 @@ function Doc() {
     return <h1>Viewing docs for feature {params[0]}</h1>;
   }
 
-  return <h1>Docs Home Page</h1>;
+  return (
+    <div>
+      <h1>Docs Home Page</h1>
+      <Link href="/">Home</Link>
+    </div>
+  );
 }
 
 export default Doc;

@@ -1,7 +1,12 @@
-import React from "react";
+import Link from "next/link";
 
 function HousesList() {
-  return <h1>Houses Listing Page</h1>;
+  return (
+    <div>
+      <h1>Houses Listing Page</h1>
+      <Link href="/">Home</Link>
+    </div>
+  );
 }
 
 export default HousesList;

@@ -1,5 +1,12 @@
+import Link from "next/link";
+
 function Profile() {
-  return <h1>Profile Page</h1>;
+  return (
+    <div>
+      <h1>Profile Page</h1>
+      <Link href="/">Home</Link>
+    </div>
+  );
 }
 
 export default Profile;
