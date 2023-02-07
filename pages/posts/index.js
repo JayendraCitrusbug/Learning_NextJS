@@ -1,27 +1,28 @@
-import Blog from "@/components/blog";
 import Link from "next/link";
 
-function BlogsList({ blogs }) {
+function PostList({ posts }) {
   return (
-    <div>
+    <>
       <h3>
         <Link href="/">Home</Link>
       </h3>
-      <h1>Blog Page</h1>
-
-      {blogs.map((blog) => {
+      <h1>List of Posts</h1>
+      {posts.map((post) => {
         return (
-          <div key={blog.id}>
-            <br></br>
-            <Blog blog={blog} />
+          <div key={post.id}>
+            <Link href={`/posts/${post.id}`}>
+              <p>
+                {post.id} {post.title}
+              </p>
+            </Link>
           </div>
         );
       })}
-    </div>
+    </>
   );
 }
 
-export default BlogsList;
+export default PostList;
 
 export async function getStaticProps() {
   const response = await fetch("https://jsonplaceholder.typicode.com/posts");
@@ -29,7 +30,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      blogs: data,
+      posts: data,
     },
   };
 }
