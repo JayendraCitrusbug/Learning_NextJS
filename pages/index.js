@@ -17,7 +17,7 @@ function Home() {
       <Link href="/posts">Posts</Link>&nbsp;&nbsp;
       <Link href="/docs">Docs</Link>&nbsp;&nbsp;
       <Link href="/houses">Houses</Link>&nbsp;&nbsp;
-      <Link href="/product">Products</Link>&nbsp;&nbsp;
+      <Link href="/products">Products</Link>&nbsp;&nbsp;
       <Link href="/profile">Profile</Link>&nbsp;&nbsp;
       <Link href="/about">About</Link>&nbsp;&nbsp;
       <button onClick={handleClick}>Place Order</button>&nbsp;&nbsp;

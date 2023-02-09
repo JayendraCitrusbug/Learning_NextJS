@@ -19,6 +19,28 @@ function Post(post) {
 
 export default Post;
 
+export async function getStaticProps(context) {
+  const { params } = context;
+  const response = await fetch(
+    `https://jsonplaceholder.typicode.com/posts/${params.postId}`
+  );
+  const data = await response.json();
+
+  console.log(`Generating page for /posts/${params.postId}`);
+
+  if (!data.id) {
+    return {
+      notFound: true,
+    };
+  }
+
+  return {
+    props: {
+      post: data,
+    },
+  };
+}
+
 export async function getStaticPaths() {
   // const response = await fetch("https://jsonplaceholder.typicode.com/posts");
   // const data = await response.json();
@@ -44,27 +66,5 @@ export async function getStaticPaths() {
       },
     ],
     fallback: true,
-  };
-}
-
-export async function getStaticProps(context) {
-  const { params } = context;
-  const response = await fetch(
-    `https://jsonplaceholder.typicode.com/posts/${params.postId}`
-  );
-  const data = await response.json();
-
-  console.log(`Generating page for /posts/${params.postId}`);
-
-  if (!data.id) {
-    return {
-      notFound: true,
-    };
-  }
-
-  return {
-    props: {
-      post: data,
-    },
   };
 }
