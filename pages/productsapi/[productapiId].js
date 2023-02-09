@@ -31,6 +31,7 @@ export async function getStaticProps(context) {
     props: {
       productapi: data,
     },
+    // revalidate: 10,
   };
 }
 
