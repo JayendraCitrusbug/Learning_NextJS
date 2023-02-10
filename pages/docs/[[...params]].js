@@ -17,8 +17,10 @@ function Doc() {
 
   return (
     <div>
+      <h3>
+        <Link href="/">Home</Link>
+      </h3>
       <h1>Docs Home Page</h1>
-      <Link href="/">Home</Link>
     </div>
   );
 }
