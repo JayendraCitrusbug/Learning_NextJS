@@ -9,15 +9,11 @@ function UserList({ users }) {
         <Link href="/">Home</Link>
       </h3>
       <h1>List of users</h1>
-
       {users.map((user) => {
         return (
-          <>
-            <br></br>
-            <div key={user.id}>
-              <User user={user} />
-            </div>
-          </>
+          <div key={user.id}>
+            <User user={user} />
+          </div>
         );
       })}
     </div>

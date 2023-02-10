@@ -12,12 +12,17 @@ function Home() {
   return (
     <div>
       <h1>Home Page</h1>
+      <Link href="/dashboard">Dashboard</Link>&nbsp;&nbsp;
+      <Link href="/dashboard-swr">Dashboard-SWR</Link>&nbsp;&nbsp;
+      <Link href="/events">Events</Link>&nbsp;&nbsp;
       <Link href="/users">Users</Link>&nbsp;&nbsp;
+      <Link href="/news">News</Link>&nbsp;&nbsp;
       <Link href="/blogs">Blogs</Link>&nbsp;&nbsp;
       <Link href="/posts">Posts</Link>&nbsp;&nbsp;
       <Link href="/docs">Docs</Link>&nbsp;&nbsp;
       <Link href="/houses">Houses</Link>&nbsp;&nbsp;
       <Link href="/products">Products</Link>&nbsp;&nbsp;
+      <Link href="/productsapi">ProductsAPI</Link>&nbsp;&nbsp;
       <Link href="/profile">Profile</Link>&nbsp;&nbsp;
       <Link href="/about">About</Link>&nbsp;&nbsp;
       <button onClick={handleClick}>Place Order</button>&nbsp;&nbsp;
