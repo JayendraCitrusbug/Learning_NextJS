@@ -12,6 +12,8 @@ function Home() {
   return (
     <div>
       <h1>Home Page</h1>
+      <Link href="/api">API</Link>&nbsp;&nbsp;
+      <Link href="/comments">Comments</Link>&nbsp;&nbsp;
       <Link href="/dashboard">Dashboard</Link>&nbsp;&nbsp;
       <Link href="/dashboard-swr">Dashboard-SWR</Link>&nbsp;&nbsp;
       <Link href="/events">Events</Link>&nbsp;&nbsp;
